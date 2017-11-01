@@ -1,0 +1,191 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[english,12pt]{article}
+%\documentclass[aps,amsmath,amssymb,groupedaddress,twocolumn]{revtex4}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{prettyref}
+\usepackage{babel}
+\usepackage{units}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{babel}
+\usepackage{color}
+%\input{epsf}
+\usepackage{cite}
+\def\@fmsl@sh#1#2#3{\m@th\ooalign{$\hfil#1\mkern#2/\hfil$\crcr$#1#3$}}
+\def\Ax{\mathcal{A}} \def\eq#1\en{\begin{equation}#1\end{equation}}
+\def\s[#1,#2]{[#1\stackrel{\star}{,}#2]}
+\def\sx[#1,#2]{[#1\stackrel{\star_{x}}{,}#2]} \def\pp#1{\partial_#1}
+\def\lrhatDmu{\stackrel{\leftrightarrow}{\widehat D_\mu}}
+\def\lrDmu{\stackrel{\leftrightarrow}{D_\mu}}
+\def\lrDnu{\stackrel{\leftrightarrow}{D^\nu}}
+\renewcommand{\baselinestretch}{1.2}
+
+\textwidth 16.5cm
+\textheight 655pt
+\parskip 0.25cm
+\hoffset -1.3cm 
+\voffset -1.5cm
+%\flushbottom
+
+\newcommand{\nc}{\newcommand}
+\nc{\beq}{\begin{equation}}
+\nc{\eeq}{\end{equation}}
+\nc{\beqa}{\begin{eqnarray}}
+\nc{\eeqa}{\end{eqnarray}}
+\def\DS {D\!\!\!\!/}
+\def\A { A_\mu (x) }
+\def\DM {\DS_{\, (\mu)}}
+\def\O {{\cal O}}
+\def\cx {\cal x}
+\def\a {\alpha}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\ie{{\it i.e.}}
+\def\eg{{\it e.g.}}
+\def\etc{{\it etc}}
+\def\etal{{\it et al.}}
+\def\ibid{{\it ibid}.}
+\def\to{\rightarrow}
+\def\lsim{\mathrel{\mathpalette\atversim<}}
+\def\gsim{\mathrel{\mathpalette\atversim>}}
+\def\DS {D\!\!\!\!/}
+\def\A { A_\mu (x) }
+\def\DM {\DS_{\, (\mu)}}
+\def\O {{\cal O}}
+\def\cx {\cal x}
+\def\a {\alpha}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\ts{\thinspace}
+%\def\fpi{F_{\pi}}
+\def\fpi{F}
+
+
+
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+
+    \raise1pt\hbox{$>$}}}       %greater than or approx. symbol
+
+
+
+\def\ts{\thinspace}
+%\def\fpi{F_{\pi}}
+\def\fpi{F}
+
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}       %greater than or approx. symbol
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeatletter
+\def\fmslash{\@ifnextchar[{\fmsl@sh}{\fmsl@sh[0mu]}}
+\def\fmsl@sh[#1]#2{%
+  \mathchoice
+    {\@fmsl@sh\displaystyle{#1}{#2}}%
+    {\@fmsl@sh\textstyle{#1}{#2}}%
+    {\@fmsl@sh\scriptstyle{#1}{#2}}%
+    {\@fmsl@sh\scriptscriptstyle{#1}{#2}}}
+\def\@fmsl@sh#1#2#3{\m@th\ooalign{$\hfil#1\mkern#2/\hfil$\crcr$#1#3$}}
+\makeatother
+%\baselineskip 24pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%                      TITLE PAGE
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\begin{titlepage}
+\boldmath
+\begin{center}
+  \Large {\bf  Symmetry and Option princing}
+    \end{center}
+\unboldmath
+\vspace{0.2cm}
+\begin{center}
+{  {\large Xavier Calmet}\footnote{x.calmet@sussex.ac.uk}$^{a,b}$ and {\large Nathaniel Wiesendanger Shaw}\footnote{nmw24@sussex.ac.uk}$^{a}$}
+ \end{center}
+\begin{center}
+$^a${\sl Department of Physics and Astronomy, 
+University of Sussex, Brighton, BN1 9QH, United Kingdom
+}\\
+$^b${\sl PRISMA Cluster of Excellence and Mainz Institute for Theoretical Physics Johannes Gutenberg University, 55099 Mainz, Germany }
+\end{center}
+\vspace{5cm}
+\begin{abstract}
+\noindent
+blabla
+\end{abstract}  
+\end{titlepage}
+
+%\pacs{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%                     INTRODUCTION
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+Let me start from
+\begin{eqnarray}
+\frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2} +(\lambda + \mu V) \frac{\partial C}{\partial V} +\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}= r C
+\end{eqnarray}
+$C=C(t,S,V)$, $V$ is time dependent.
+ 
+The aim is to treat $S$ and $V$ as symmetrically as possible to make a global Galilean invariance in 2+1 manifest. Terms that violate this symmetry will be reintroduced as symmetry breaking terms. We will need to invent the rule to introduce these terms and not others if this is not the most generic symmetry breaking pattern. This is to be discussed later.
+
+With this aim in mind, let me introduce an averaged volatility $\bar V$ (we can pick a standard way to define it) which is constant.  It is also clear that we need to pick $\alpha=1$  to emphasize the symmetry between $S$ and $V$. (By the way I am surprised that $\alpha$ can be changed like this, it will affect the dimension of this term, and something else must match its dimension).
+
+Let me thus start from 
+\begin{eqnarray}
+\frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \bar V S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
+\end{eqnarray}
+we will need to reintroduce $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ and the terms corresponding to deviations from 1 for $\alpha$.
+
+In the previous equation, we see that we have a mixed derivative term which we may not be able to diagonalize (we should check this again), I would thus set $\rho=0$ and reintroduce the term as symmetry breaking term. 
+
+We thus end-up with
+\begin{eqnarray}
+\frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \bar V S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
+\end{eqnarray}
+
+We should be able to map this into the usual 2+1 heat equation. Can you please check that?
+
+
+{\it Acknowledgments:}
+The work of XC is supported in part  by the Science and Technology Facilities Council (grant number  ST/P000819/1). XC is very grateful to MITP for their generous hospitality during the academic year 2017/2018. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%                     BIBLIOGRAPHY
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bigskip{}
+
+
+\baselineskip=1.6pt 
+
+\begin{thebibliography}{10}
+
+   
+\end{thebibliography}
+
+
+
+\end{document}
+
