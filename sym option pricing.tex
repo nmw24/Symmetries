@@ -151,7 +151,7 @@ With this aim in mind, let me introduce an averaged volatility $\bar V$ (we can 
 
 Let me thus start from 
 \begin{eqnarray}
-\frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \bar V S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
+\label{full merton} \frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \bar V S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
 \end{eqnarray}
 we will need to reintroduce $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ and the terms corresponding to deviations from 1 for $\alpha$.
 
@@ -215,6 +215,15 @@ This yields \ref{pre-exponential} to become the heat equation in 2+1 dimensions:
 \frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x} + \frac{\partial^2 \psi}{\partial Y^2}~.
 \end{equation}
 
+
+
+
+
+However, when we re-introduce the symmetry breaking terms, identified from \ref{full merton}, namely: $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ these terms transform the above equation to: 
+
+\begin{equation}
+\frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x} + \frac{\partial^2 \psi}{\partial Y^2} + \frac{1}{2}e^{y}\frac{\partial^2 \psi}{\partial x^2} -\frac{1}{2}e^{y}k\frac{\partial \psi}{\partial x} + \lambda\Theta e^{-y}\frac{\partial\psi}{\partial Y} + \psi \Bigg{[} \frac{1}{8}e^{y}(k^{2} - 1) - \frac{\lambda\theta e^{-y}}{2\zeta^{2}} \Bigg{]}~.
+\end{equation}
 
 
 
