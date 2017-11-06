@@ -147,11 +147,11 @@ $C=C(t,S,V)$, $V$ is time dependent.
  
 The aim is to treat $S$ and $V$ as symmetrically as possible to make a global Galilean invariance in 2+1 manifest. Terms that violate this symmetry will be reintroduced as symmetry breaking terms. We will need to invent the rule to introduce these terms and not others if this is not the most generic symmetry breaking pattern. This is to be discussed later.
 
-With this aim in mind, let me introduce an averaged volatility $\bar V$ (we can pick a standard way to define it) which is constant.  It is also clear that we need to pick $\alpha=1$  to emphasize the symmetry between $S$ and $V$. (By the way I am surprised that $\alpha$ can be changed like this, it will affect the dimension of this term, and something else must match its dimension).
+With this aim in mind, let me introduce an averaged volatility $\sigma^{2}$ (we can pick a standard way to define it) which is constant.  It is also clear that we need to pick $\alpha=1$  to emphasize the symmetry between $S$ and $V$. (By the way I am surprised that $\alpha$ can be changed like this, it will affect the dimension of this term, and something else must match its dimension).
 
 Let me thus start from 
 \begin{eqnarray}
-\label{full merton} \frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \bar V S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
+\label{full merton} \frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} \sigma^{2} S^2 \frac{\partial^2 C}{\partial S^2} +\mu V \frac{\partial C}{\partial V} +\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}= r C
 \end{eqnarray}
 we will need to reintroduce $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ and the terms corresponding to deviations from 1 for $\alpha$.
 
@@ -160,38 +160,38 @@ In the previous equation, we see that we have a mixed derivative term which we m
 We thus end-up with:
 
 \begin{equation}
-\frac{\partial C}{\partial t} + rS\frac{\partial C}{\partial S} + \frac{1}{2}\bar{V}S^{2}\frac{\partial^2 C}{\partial S^2} + \mu V \frac{\partial C}{\partial V} + \zeta^2 V^2 \frac{\partial^2 C}{\partial V^2} - rC = 0~,
+\frac{\partial C}{\partial t} + rS\frac{\partial C}{\partial S} + \frac{1}{2}{\sigma^{2}}S^{2}\frac{\partial^2 C}{\partial S^2} + \mu V \frac{\partial C}{\partial V} + \xi^2 V^2 \frac{\partial^2 C}{\partial V^2} - rC = 0~,
 \end{equation}
 
 
 We now make the standard substitutions for the underlying and variance, treating them as equal spatial type variables: $x = \text{ln}(S)$ and $y = \text{ln}(V)$, yielding:
 
 \begin{equation}
-\frac{\partial C}{\partial t} + \kappa \frac{\partial C}{\partial x} + \theta \frac{\partial C}{\partial y} + \frac{1}{2}\bar{V}\frac{\partial^2 C}{\partial x^2} + \zeta^2 \frac{\partial^2 C}{\partial y^2} - rC = 0~.
+\frac{\partial C}{\partial t} + \kappa \frac{\partial C}{\partial x} + \theta \frac{\partial C}{\partial y} + \frac{1}{2}{\sigma^{2}}\frac{\partial^2 C}{\partial x^2} + \xi^2 \frac{\partial^2 C}{\partial y^2} - rC = 0~.
 \end{equation}
 
-Where, $\kappa = r - \frac{1}{2}\bar{V}$ and $\theta = \mu - \zeta^2$.
+Where, $\kappa = r - \frac{1}{2}{\sigma^{2}}$ and $\theta = \mu - \xi^2$.
 \\
-\indent In order to remove the constant term, $\frac{1}{2}\bar{V}$ outside the second derivative of x we make the time transformation: $\tau = \frac{\bar{V}}{2} (T-t)$, yielding: 
+\indent In order to remove the constant term, $\frac{1}{2}{\sigma^{2}}$ outside the second derivative of x we make the time transformation: $\tau = \frac{{\sigma^{2}}}{2} (T-t)$, yielding: 
 
 \begin{equation}
-\label{pre-exponential} -\frac{\partial C}{\partial \tau} + (k - 1)\frac{\partial C}{\partial x} + \frac{2\theta}{\bar{V}}\frac{\partial C}{\partial y} + \frac{\partial^2 C}{\partial x^2} + \Theta\frac{\partial^2 C}{\partial y^2} - kC = 0~,
+\label{pre-exponential} -\frac{\partial C}{\partial \tau} + (k - 1)\frac{\partial C}{\partial x} + \frac{2\theta}{{\sigma^{2}}}\frac{\partial C}{\partial y} + \frac{\partial^2 C}{\partial x^2} + \Theta\frac{\partial^2 C}{\partial y^2} - kC = 0~,
 \end{equation}
 
-Whereby: $k = \frac{2r}{\bar{V}}$ and $\Theta = \frac{2\zeta^2}{\bar{V}}$. We proceed with the further substitution: $Y = \frac{1}{\Theta}y$, transforming the coefficient of the second volatility related derivative to unity:
+Whereby: $k = \frac{2r}{{\sigma^{2}}}$ and $\Theta = \frac{2\xi^2}{{\sigma^{2}}}$. We proceed with the further substitution: $y = \frac{1}{\Theta}y$, transforming the coefficient of the second volatility related derivative to unity:
 
 \begin{equation}
--\frac{\partial C}{\partial \tau} + (k - 1)\frac{\partial C}{\partial x} + \frac{\theta}{\zeta^2}\frac{\partial C}{\partial Y} + \frac{\partial^2 C}{\partial x^2} + \frac{\partial^2 C}{\partial Y^2} - kC = 0~.
+-\frac{\partial C}{\partial \tau} + (k - 1)\frac{\partial C}{\partial x} + \frac{\theta}{\xi^2}\frac{\partial C}{\partial y} + \frac{\partial^2 C}{\partial x^2} + \frac{\partial^2 C}{\partial y^2} - kC = 0~.
 \end{equation}
 
 \begin{equation}
-C(x,Y,\tau) = \phi(x,Y,\tau)\psi(x,Y,\tau)~,
+C(x,y,\tau) = \phi(x,y,\tau)\psi(x,y,\tau)~,
 \end{equation}
 
 With: 
 
 \begin{equation}
-\phi(x,Y,\tau) = \text{exp}(\alpha x + \beta Y + \gamma\tau)~.
+\phi(x,y,\tau) = \text{exp}(\alpha x + \beta y + \gamma\tau)~.
 \end{equation}
 
 Whereby the terms: $\alpha, \beta, \gamma$ are chosen by inspection, after substitution into \ref{pre-exponential} we see that the choice: 
@@ -201,10 +201,10 @@ Whereby the terms: $\alpha, \beta, \gamma$ are chosen by inspection, after subst
 \alpha &= -\frac{1}{2}(k - 1)~, \\
 %\end{equation}
 %\begin{equation}
-\beta &= -\frac{\theta}{2\zeta^2}~, \\
+\beta &= -\frac{\theta}{2\xi^2}~, \\
 %\end{equation}
 %\begin{equation}
-\gamma &= -\frac{1}{4}(k + 1)^2 -\frac{\theta^2}{4\zeta^4}~,
+\gamma &= -\frac{1}{4}(k + 1)^2 -\frac{\theta^2}{4\xi^4}~,
 %\end{equation}
 \end{align}
 
@@ -212,31 +212,42 @@ This yields \ref{pre-exponential} to become the heat equation in 2+1 dimensions:
 
 
 \begin{equation}
-\frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x} + \frac{\partial^2 \psi}{\partial Y^2}~.
+\frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x} + \frac{\partial^2 \psi}{\partial y^2}~.
 \end{equation}
 
 
 
 
 
-However, when we re-introduce the symmetry breaking terms, identified from \ref{full merton}, namely: $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ these terms transform the above equation to: 
+However, when we re-introduce the symmetry breaking terms, identified from \ref{full merton}, namely: $\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$,  $\lambda \frac{\partial C}{\partial V} $ and $\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} $. We will re-introduce them as such:  $\frac{c_1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$, $c_2 \lambda \frac{\partial C}{\partial V}$, $c_{\rho} \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} $, where the constants $c_{i}$ control the magnitude of the symmetry breaking, yielding:
+
+\begin{multline}
+\frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x^{2}}\Bigg{[}  1 +  \frac{c_{1}e^{y}}{2}  \Bigg{]} + \frac{\partial^2 \psi}{\partial y^2} + \frac{c_{\rho}\xi e^{y/2}}{\Theta}\frac{\partial^{2}\psi}{\partial x\partial y} - \frac{\partial \psi}{\partial x} \Bigg{[}\frac{ c_{\rho}\xi e^{y/2} \theta}{2\xi^{2}}  + k \frac{c_{1}e^{y}}{2}    \Bigg{]} \\ + \frac{\partial\psi}{\partial y} \Bigg{[}c_{2}\lambda\Theta e^{-y}   - \frac{c_{\rho}\xi e^{y/2}(k-1)}{2\Theta}   \Bigg{]}    + \psi \Bigg{[} \frac{c_{1}}{8}e^{y}(k^{2} - 1) - \frac{c_{2}\lambda\theta e^{-y}}{2\xi^{2}} +  c_{\rho}\xi e^{y/2}\frac{(k - 1)\theta}{4\xi^{2}}  \Bigg{]}~.
+\end{multline}
+
+
 
 \begin{equation}
-\frac{\partial \psi}{\partial \tau} = \frac{\partial^2 \psi}{\partial x} + \frac{\partial^2 \psi}{\partial Y^2} + \frac{1}{2}e^{y}\frac{\partial^2 \psi}{\partial x^2} -\frac{1}{2}e^{y}k\frac{\partial \psi}{\partial x} + \lambda\Theta e^{-y}\frac{\partial\psi}{\partial Y} + \psi \Bigg{[} \frac{1}{8}e^{y}(k^{2} - 1) - \frac{\lambda\theta e^{-y}}{2\zeta^{2}} \Bigg{]}~.
+\rho\xi e^{y/2} \Bigg{[} \frac{(k-1)\theta}{4\xi^{2}}\psi - \frac{(k-1)}{2\Theta}\frac{\partial\psi}{\partial y}  - \frac{\theta}{2\xi^{2}}\frac{\partial\psi}{\partial x}   +\frac{1}{\Theta}\frac{\partial^{2}\psi}{\partial x\partial y}  \Bigg{]}
 \end{equation}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%                     COMMENTS
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 {\bf comments}
 
 \begin{itemize}
-\item I would introduce constants $c_i$ to control the magnitude of the symmetry breaking terms:
-$\frac{c_1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}$, $c_2 \lambda \frac{\partial C}{\partial V}$. For the cross-derivative term $\rho$ determines the strength of the breaking $\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V}$. Maybe we rename $\rho$, $c_{something}$ to make this clear.
 \item we can parametrize the deviation from $\alpha=1$ as follows
 $\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}\to\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}- c_3 (\xi^2 V^{2}  \frac{\partial^2 C}{\partial V^2}-\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}) $ and $\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V}\to \rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} 
 - c_4(\rho \xi V^{3/2} S \frac{\partial^2 C}{\partial S \partial V} -
 \rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V}) $ 
-\item we can rename $Y\to y$ and $\bar V=\sigma$ and define $\sigma$ as an average of $V$.
 \item we need to look at the representations of the 2+1 Galilean group and check whether there are other useful quantities (vectors) that have a useful interpretation.
 \item we need an interpretation of the symmetry breaking terms
 \end{itemize}
@@ -262,7 +273,7 @@ The work of XC is supported in part  by the Science and Technology Facilities Co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
-%%%                     BIBLIOGRAPHY
+%%%                     BIBLIOGRAPHy
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
