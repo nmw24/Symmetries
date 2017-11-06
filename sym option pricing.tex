@@ -292,8 +292,21 @@ $\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}\to\xi^2 V^{2}  \frac{\par
 
 
 
+Sanity check for my benefit:
 
-
+looking at terms in
+\begin{eqnarray}
+\label{original MG} \frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2} +(\lambda + \mu V) \frac{\partial C}{\partial V} +\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}= r C
+\end{eqnarray}
+\begin{itemize}
+\item $[C]=\$$
+\item $[\frac{\partial C}{\partial t}]=\$/time$
+\item $[r S \frac{\partial C}{\partial S}]= [r] \$ $ thus $[r]=1/time$
+\item $[\frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2}]=[V] \$$ thus  $[V]=1/time$
+\item $[(\lambda + \mu V) \frac{\partial C}{\partial V}]=([\lambda] + [\mu] 1/time)$ thus $[\lambda]=\$/time$ and $[\mu]=\$$
+\item $[\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V}]= [\rho] [\xi] [1/time]^{1/2+\alpha} \$ time=\$ /time$ thus $[\rho] [\xi]= time^{\alpha-3/2}$
+\item $[\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}]=[\xi]^2 [1/time]^{2 \alpha-2} \$=\$/time $ thus $[\xi]=time^{\alpha-3/2}$ and $\rho$ is dimensionless.
+\end{itemize}
 
 
 
