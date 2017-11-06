@@ -141,7 +141,7 @@ blabla
 
 Let me start from
 \begin{eqnarray}
-\frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2} +(\lambda + \mu V) \frac{\partial C}{\partial V} +\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}= r C
+\label{original MG} \frac{\partial C}{\partial t}+ r S \frac{\partial C}{\partial S} + \frac{1}{2} V S^2 \frac{\partial^2 C}{\partial S^2} +(\lambda + \mu V) \frac{\partial C}{\partial V} +\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} +\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}= r C
 \end{eqnarray}
 $C=C(t,S,V)$, $V$ is time dependent.
  
@@ -227,11 +227,42 @@ However, when we re-introduce the symmetry breaking terms, identified from \ref{
 
 
 
+\vskip15mm
+\section{Dimensionality Check}
+\vskip5mm
+
+Here we check the dimensionality of the two terms in \ref{original MG} which contain $\alpha$. To do so we use the following notation: $[.]$ denotes the dimensions. First let us analyse the term: $\xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2}$
+
 \begin{equation}
-\rho\xi e^{y/2} \Bigg{[} \frac{(k-1)\theta}{4\xi^{2}}\psi - \frac{(k-1)}{2\Theta}\frac{\partial\psi}{\partial y}  - \frac{\theta}{2\xi^{2}}\frac{\partial\psi}{\partial x}   +\frac{1}{\Theta}\frac{\partial^{2}\psi}{\partial x\partial y}  \Bigg{]}
+\Bigg{[} \xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2} \Bigg{]} = [\$] [\text{sec}^{2}][\text{sec}^{-4}][\text{sec}^{-1}]^{2\alpha}
+\end{equation}
+
+\begin{equation}
+\Bigg{[} \xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2} \Bigg{]} = [\$] [\text{sec}^{-2}][\text{sec}^{-1}]^{2\alpha}
+\end{equation}
+
+\begin{equation}
+\Bigg{[} \xi^2 V^{2 \alpha}  \frac{\partial^2 C}{\partial V^2} \Bigg{]} = [\$] [\text{sec}^{-1}]^{2(\alpha + 1)}
+\end{equation}
+
+From the above it is trivial to see that the dimensionality only equals $[\$][\text{sec}^{-1}]$, which is consistent with the other terms in \ref{original MG}, when $\alpha = -1/2$. Next we analyse: $\rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V}$
+
+\begin{equation}
+\Bigg{[} \rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} \Bigg{]} = [\text{sec}][\text{sec}^{-2}][\text{sec}^{-1}]^{1/2+\alpha}[\$]
+\end{equation}
+
+\begin{equation}
+\Bigg{[} \rho \xi V^{1/2+\alpha} S \frac{\partial^2 C}{\partial S \partial V} \Bigg{]} = [\text{sec}^{-1}]^{3/2+\alpha}[\$]
 \end{equation}
 
 
+The above is also consistent with the value of $\alpha = -1/2$. However, from solving: 
+
+\begin{equation}
+2(\alpha + 1) = \frac{3}{2} + \alpha~,
+\end{equation}
+
+We see that $\alpha = -1/2$ is the only solution for which the two terms have equal dimensions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
